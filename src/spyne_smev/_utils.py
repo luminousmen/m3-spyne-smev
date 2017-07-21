@@ -7,7 +7,10 @@ factory.py
 :Author: timic
 """
 import os
-from StringIO import StringIO
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
 
 from lxml import etree
 from six import binary_type, text_type, PY3

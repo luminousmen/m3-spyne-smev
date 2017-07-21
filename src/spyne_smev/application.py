@@ -30,10 +30,8 @@ class Application(SpyneApplication):
         except Fault, e:
             logger.exception(e)
             raise
-        except Exception, e:
+        except Exception as e:
             e_text = unicode(format_exc(), errors="ignore")
             self.event_manager.fire_event("method_call_exception", e_text)
             logger.exception(e)
             raise InternalError(e)
-
-

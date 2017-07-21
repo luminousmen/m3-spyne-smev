@@ -17,10 +17,10 @@ from spyne.interface.wsdl.wsdl11 import Wsdl11 as _Wsdl11
 from spyne.model.fault import Fault as _Fault
 from spyne.const.http import HTTP_200
 
-import _utils
-import _xmlns as _ns
-from wsse.protocols import Soap11WSSE
-from fault import ApiError as _ApiError
+from spyne_smev import _utils
+import spyne_smev._xmlns as _ns
+from spyne_smev.wsse.protocols import Soap11WSSE
+from spyne_smev.fault import ApiError as _ApiError
 
 
 class BaseSmev(Soap11WSSE):

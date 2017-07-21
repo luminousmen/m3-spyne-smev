@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-"""               
+"""
 fault.py
-                  
-:Created: 19 Aug 2014  
-:Author: tim    
+
+:Created: 19 Aug 2014
+:Author: tim
 """
 
 from spyne.model.fault import Fault as _Fault

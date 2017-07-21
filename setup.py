@@ -15,10 +15,11 @@ def _get_requirements(file_name):
 
 def _read(fname):
     try:
-        return open(os.path.join(os.path.dirname(__file__),
-            fname)).read()
+        path = os.path.join(os.path.dirname(__file__), fname)
+        return open(path, 'rb').read().decode("UTF-8")
     except IOError:
         return ''
+
 
 setup(
     name='m3-spyne-smev',
@@ -41,12 +42,6 @@ setup(
         'Programming Language :: Python',
         'License :: OSI Approved :: MIT License',
         'Development Status :: 5 - Production/Stable',
-    ),
-    dependency_links=(
-        'http://pypi.bars-open.ru/simple/m3-builder',
-    ),
-    setup_requires=(
-        'm3-builder>=1.0.1',
     ),
     set_build_info=os.path.dirname(__file__),
 )
